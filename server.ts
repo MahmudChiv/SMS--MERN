@@ -2,7 +2,7 @@ import express from "express";
 import type { Application, Request, Response } from "express";
 import mongoose from "mongoose";
 import session from "express-session"
-import passport from "passport";
+import passport from "./config/passport";
 import dotenv from "dotenv";
 dotenv.config();
 import cors from "cors";

@@ -29,7 +29,7 @@ export class Admin extends Model {
 
   @Column ({
     type: DataType.STRING,
-    allowNull: false,
+    allowNull: true,
   })
   lastName!: string;
 

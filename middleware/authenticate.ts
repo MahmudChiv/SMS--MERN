@@ -7,7 +7,7 @@ export const isAuthenticated = (req: Request, res: Response, next: NextFunction)
 
 export const hasRole = (role: string) => {
   return (req: Request, res: Response, next: NextFunction) => {
-    if (req.user && req.user.role === role) return next();
+    if (req.user && (req.user as any).role === role) return next();
     return res.status(403).json({ message: "Access denied" });
   };
 }
