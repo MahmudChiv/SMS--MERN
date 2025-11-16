@@ -18,10 +18,11 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
+const secretKey = process.env.SESSION_SECRET || "default_secret";
 // ⚙️ Setup express-session
 app.use(
   session({
-    secret: "yourSecretKey",
+    secret: secretKey,
     resave: false,
     saveUninitialized: false,
   })
